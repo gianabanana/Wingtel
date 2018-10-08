@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+<link rel = "icon" href = "iconpic/goshort.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>GOHOTELS PH</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+	<div class = "bg"></div>
+	<banner>
+		<div id="banner">
+		<div id="logo">
+			<img src="iconpic/go.png">
+		</div>
+
+			<div class="contactnum">
+				<p> Call to book at +639368445144/+639152190503 </p>
+			</div>
+
+			<div id="inside">
+				<ul>
+					<!-- <li><a href="showbranch.php">BRANCHES</a></li> -->
+					<!-- <li><a href="login.php">LOGIN</a></li>
+					<li><a href="register.php">REGISTER</a></li> -->
+					<li><span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;
+							Menu</span></li>
+				</ul>
+	</div>
+</div>
+</banner>
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="#">About</a>
+			<a href="#">Services</a>
+			<a href="#">Clients</a>
+			<a href="#">Contact</a>
+		</div>
+
+<div class="topnav">
+		<div class="options">
+			<div>
+				<button onclick="location.href='login.php'" type="button" class="button">LOGIN</button>
+				<button onclick="location.href='register.php'" type="button" class="button">REGISTER</button>
+			</div>
+			<!-- <div class="dropdown">
+				<button onclick="button1Function()" class="dropbtn">SELECT LOCATION</button>
+				<div id="myDropdown1" class="dropdown-content1">
+					<input type="text" placeholder="Search.." id="myInput1" onkeyup="filterFunction1()">
+						<a href="#bacolod">BACOLOD</a>
+						<a href="#butuan">BUTUAN</a>
+						<a href="#cubao">CUBAO</a>
+						<a href="#dumaguete">DUMAGUETE</a>
+						<a href="#ermita">ERMITA-MANILA</a>
+						<a href="#iligan">ILIGAN (SOON TO OPEN)</a>
+						<a href="#iloilo">ILOILO</a>
+				</div>
+			</div> -->
+
+			<!-- <form action="/action_page.php" class="checkin">CHECK-IN
+				<input type="date" name="completedate">
+			</form>
+
+			<form action="/action_page.php" class="checkout">CHECK-OUT
+				<input type="date" name="completedate">
+			</form>
+
+			<button class="navbutton">NIGHTS</button>
+			<button class="navbutton">NO. OF ROOMS</button>
+			<button onclick="location.href='booking.php'" type="button" class="button">BOOK NOW</button> -->
+			</div>
+	</div>
+
+	<div class="slideshow">
+
+		<div class="mySlides-fade">
+			<img src="img/3.png" style="position: relative; top: 120px; padding-left:8px">
+		</div>
+
+		<div class="mySlides-fade">
+			<img src="img/4.png" style="position: relative; top: 120px; padding-left:8px">
+		</div>
+
+		<div class="mySlides-fade">
+			<img src="img/5.png" style="position: relative; top: 120px; padding-left:8px">
+		</div>
+
+</div>
+
+<div class="pic">
+		<img src="iconpic/mid.png">
+</div>
+
+<br>
+
+	<div class="teaser">
+		<section class="mainmsg">DISCOVER PLACES AND GOHOTEL BRANCHES</section>
+		<div class="subtease">
+		<button onclick="location.href='showbranch.php'" type="button" class="subtease_i">LET'S GO!</button>
+		</div>
+	</div>
+
+<div class="imgsets">
+
+</div>
+
+<footer>
+    <ul class="socMed">
+      <li><a href="https://www.facebook.com" target="_blank"><i class = "fa fa-facebook"></i></a></li>
+      <li><a href="https://www.instagram.com" target="_blank"><i class = "fa fa-instagram"></i></a></li>
+      <li><a href="https://www.twitter.com" target="_blank"><i class = "fa fa-twitter"></i></a></li>
+      <li><a href="https://www.youtube.com" target="_blank"><i class = "fa fa-youtube"></i></a></li>
+    </ul>
+  </footer>
+  <footer class = "copyr">
+      <p>&copy; GoHotelsfake</p>
+  </footer>
+
+</body>
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides-fade");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+  }
+
+/* script for top nav*/
+	function button1Function() {
+		    document.getElementById("myDropdown1").classList.toggle("show");
+		}
+
+		function filterFunction1() {
+		    var input, filter, ul, li, a, i;
+		    input = document.getElementById("myInput1");
+		    filter = input.value.toUpperCase();
+		    div = document.getElementById("myDropdown1");
+		    a = div.getElementsByTagName("a");
+		    for (i = 0; i < a.length; i++) {
+		        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+		            a[i].style.display = "";
+		        } else {
+		            a[i].style.display = "none";
+		        }
+		    }
+		}
+
+		/*script for the side Menu*/
+
+		function openNav() {
+	    document.getElementById("mySidenav").style.width = "250px";
+	    document.getElementById("main").style.marginLeft = "250px";
+		}
+
+		function closeNav() {
+	    document.getElementById("mySidenav").style.width = "0";
+	    document.getElementById("main").style.marginLeft= "0";
+		}
+
+</script>
+
+</html>
